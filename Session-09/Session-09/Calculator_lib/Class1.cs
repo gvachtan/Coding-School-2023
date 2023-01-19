@@ -1,5 +1,8 @@
-﻿namespace Calculator_lib
-{
+﻿using System;
+
+namespace Session_09 
+{ 
+
     public class Calculator
     {
         public double Add(double a, double b)
