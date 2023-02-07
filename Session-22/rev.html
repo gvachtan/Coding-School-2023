@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <script>
+      function reverseString(str) {
+        return str.split('').reverse().join('');
+      }
+      
+      function displayReversedString() {
+        let input = document.getElementById("input").value;
+        let reversed = reverseString(input);
+        document.getElementById("result").innerHTML = reversed;
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <label for="input">Input:</label>
+      <input type="text" id="input" />
+    </div>
+    <button onclick="displayReversedString()">Reverse</button>
+    <div id="result"></div>
+  </body>
+</html>

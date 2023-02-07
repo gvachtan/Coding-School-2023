@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #input-field {
+        width: 250px;
+        height: 30px;
+        font-size: 20px;
+        margin: 20px;
+      }
+
+      #submit-button {
+        width: 100px;
+        height: 30px;
+        font-size: 20px;
+        margin: 20px;
+      }
+
+      #output-field {
+        width: 250px;
+        height: 30px;
+        font-size: 20px;
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <input
+      type="text"
+      id="input-field"
+      placeholder="Enter a string"
+    />
+    <button id="submit-button">Submit</button>
+    <input type="text" id="output-field" disabled />
+    <script>
+      function incrementString(str) {
+        let num = str.match(/\d+$/);
+        if (!num) {
+          return str + "1";
+        } else {
+          let number = parseInt(num[0]) + 1;
+          return str.replace(/\d+$/, number);
+        }
+      }
+
+      document.getElementById("submit-button").addEventListener("click", function() {
+        let input = document.getElementById("input-field").value;
+        let output = incrementString(input);
+        document.getElementById("output-field").value = output;
+      });
+    </script>
+  </body>
+</html>
